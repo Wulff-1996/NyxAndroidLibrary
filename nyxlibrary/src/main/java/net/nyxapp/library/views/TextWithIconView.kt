@@ -35,31 +35,31 @@ class TextWithIconView : ConstraintLayout {
     var textView: TextView = text_with_icon_text
     var iconView: IconTextView = text_with_icon_icon_after
 
-    private val styleBody = "0"
-    private var styleHeader = "1"
-
     private fun getAttributes(attrSet: AttributeSet) {
         context.theme.obtainStyledAttributes(
-                attrSet,
-                R.styleable.TextWithIconView,
-                0, 0).apply {
+            attrSet,
+            R.styleable.TextWithIconView,
+            0, 0
+        ).apply {
             try {
                 if ("0" == getString(R.styleable.TextWithIconView_icon_placement)) {
                     iconView = text_with_icon_icon_before
                 }
-                val textAppearence = getResourceId(R.styleable.TextWithIconView_style, R.style.bodyText)
-                textView.setTextAppearance(textAppearence)
-                iconView.setTextAppearance(textAppearence)
-                color = getColor(R.styleable.TextWithIconView_textAndIconColor, context.getColor(R.color.text))
-                textView.setTextColor(getColor(R.styleable.TextWithIconView_textColor, color))
+                color = getColor(R.styleable.TextWithIconView_text_and_icon_color, context.getColor(R.color.text))
+                textView.setTextColor(getColor(R.styleable.TextWithIconView_text_color, color))
                 text = getString(R.styleable.TextWithIconView_text)
                 icon = getString(R.styleable.TextWithIconView_nyx_icon)
-                textView.setTextAppearance(getResourceId(R.styleable.TextWithIconView_style, 0))
-                iconView.setTextAppearance(getResourceId(R.styleable.TextWithIconView_style, 0))
-                iconView.setTextColor(getColor(R.styleable.TextWithIconView_iconColor, color))
+                iconView.setTextColor(getColor(R.styleable.TextWithIconView_icon_color, color))
                 iconView.setType(context, getInt(R.styleable.TextWithIconView_icon_type, ICON_TYPE_LIGHT))
-                if (getDimension(R.styleable.TextWithIconView_icon_size, 0f) != 0f) iconView.setTextSize(TypedValue.COMPLEX_UNIT_PX, getDimension(R.styleable.TextWithIconView_icon_size, 0f))
-                setAlignment(getString(R.styleable.TextWithIconView_textAlignment) ?: "0")
+                if (getDimension(
+                        R.styleable.TextWithIconView_icon_size,
+                        0f
+                    ) != 0f
+                ) iconView.setTextSize(
+                    TypedValue.COMPLEX_UNIT_PX,
+                    getDimension(R.styleable.TextWithIconView_icon_size, 0f)
+                )
+                setAlignment(getString(R.styleable.TextWithIconView_text_alignment) ?: "0")
                 if (getDimension(R.styleable.TextWithIconView_icon_width, -1f) != -1f) {
                     iconView.width = (getDimension(R.styleable.TextWithIconView_icon_width, -1f)).toInt()
                     iconView.gravity = Gravity.CENTER_HORIZONTAL
@@ -67,7 +67,14 @@ class TextWithIconView : ConstraintLayout {
                 if (getDimension(R.styleable.TextWithIconView_text_width, -1f) != -1f) {
                     textView.width = (getDimension(R.styleable.TextWithIconView_text_width, -1f)).toInt()
                 }
-                if (getDimension(R.styleable.TextWithIconView_textSize, 0f) != 0f) textView.setTextSize(TypedValue.COMPLEX_UNIT_PX, getDimension(R.styleable.TextWithIconView_textSize, 0f))
+                if (getDimension(
+                        R.styleable.TextWithIconView_text_size,
+                        0f
+                    ) != 0f
+                ) textView.setTextSize(
+                    TypedValue.COMPLEX_UNIT_PX,
+                    getDimension(R.styleable.TextWithIconView_text_size, 0f)
+                )
 
             } finally {
                 recycle()

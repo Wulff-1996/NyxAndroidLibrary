@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#151921</color>
+    <color name="colorAccent">#FF4D6F</color>
+    <color name="accentHalfAlpha">#50FF4D6F</color>
+    <color name="colorAccentDark">#FF4D6F</color>
+    <color name="text">#F0F1F3</color>
+    <color name="bodyText">#646A75</color>
+    <color name="colorFacebook">#3b5998</color>
+    <color name="colorSec">#0A0F17</color>
+    <color name="colorTextShadow">#000000</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorSecTransparent">#98000008</color>
+    <color name="success">#4BB543</color>
+    <color name="warning">#95FF0000</color>
+    <color name="refund_blue">#3e71cc</color>
+    <color name="expired_yellow">#d4a422</color>
+</resources>

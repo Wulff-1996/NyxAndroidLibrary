@@ -6,6 +6,6 @@
         android:color="@color/text"/>
 
     <!-- Default color -->
-    <item android:color="@color/facebookBlue" />
+    <item android:color="@color/facebook_blue" />
 
 </selector>

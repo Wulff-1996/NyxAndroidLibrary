@@ -11,8 +11,8 @@
                 android:topRightRadius="100dp" />
             <stroke
                 android:width="2dp"
-                android:color="@color/facebookBlue" />
-            <solid android:color="@color/facebookBlue"/>
+                android:color="@color/facebook_blue" />
+            <solid android:color="@color/facebook_blue"/>
         </shape>
     </item>
     <item>
@@ -26,7 +26,7 @@
                 android:topRightRadius="100dp" />
             <stroke
                 android:width="2dp"
-                android:color="@color/facebookBlue" />
+                android:color="@color/facebook_blue" />
         </shape>
     </item>
 </selector>
