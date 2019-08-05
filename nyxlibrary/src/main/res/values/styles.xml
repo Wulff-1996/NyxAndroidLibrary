@@ -1,0 +1,136 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/primaryBg</item>
+        <item name="colorPrimaryDark">@color/primaryBg</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/secondaryBg</item>
+        <item name="android:textColorPrimary">@color/text</item>
+        <item name="android:textColorSecondary">@color/mutedText</item>
+        <item name="drawerArrowStyle">@style/DrawerIcon</item>
+    </style>
+
+    <style name="DrawerIcon" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="color">@color/text</item>
+    </style>
+
+    <style name="ToolbarColoredBackArrow" parent="AppTheme">
+        <item name="android:textColorSecondary">@color/text</item>
+    </style>
+
+    <style name="bodyText" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">@dimen/body_text_font_size</item>
+        <item name="android:textColor">@color/text</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
+    </style>
+
+    <style name="radioButtonValueText" parent="bodyText">
+        <item name="android:textSize">@dimen/body_text_font_size</item>
+    </style>
+
+    <style name="bodyText.muted">
+        <item name="android:textColor">@color/mutedText</item>
+    </style>
+
+    <style name="bodyText.muted.medium">
+        <item name="android:fontFamily">@font/roboto_medium</item>
+    </style>
+
+    <style name="bodyText.muted.bold">
+        <item name="android:fontFamily">@font/roboto_bold</item>
+    </style>
+
+    <style name="bodyText.bold">
+        <item name="android:fontFamily">@font/roboto_bold</item>
+    </style>
+
+    <style name="settings_item_header" parent="bodyText.muted">
+        <item name="android:textSize">10dp</item>
+    </style>
+
+    <style name="bodyText.medium">
+        <item name="android:fontFamily">@font/roboto_medium</item>
+    </style>
+
+    <style name="header.toolbarTitle.underTitle">
+        <item name="android:textColor">@color/mutedText</item>
+    </style>
+
+
+    <style name="header" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/text</item>
+        <item name="android:textSize">@dimen/header_font_size</item>
+        <item name="android:fontFamily">@font/roboto_bold</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="numeric_keyboard_fa_button" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">20dp</item>
+        <item name="android:minHeight">60dp</item>
+        <item name="android:textColor">@color/mutedText</item>
+    </style>
+
+    <style name="header.toolbarTitle">
+        <item name="android:fontFamily">@font/roboto_bold</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="toolbar_button_employee" parent="header.toolbarTitle">
+        <item name="android:textColor">@drawable/toolbar_button_employee</item>
+        <item name="android:background">@color/transparent</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+    <style name="toolbar_button_member" parent="header.toolbarTitle">
+        <item name="android:textColor">@drawable/toolbar_button_member</item>
+        <item name="android:background">@color/transparent</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+    <style name="back_arrow" parent="header.toolbarTitle">
+        <item name="android:textSize">19dp</item>
+        <item name="android:textColor">@drawable/back_arrow_color</item>
+        <item name="android:background">@color/transparent</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:padding">8dp</item>
+    </style>
+
+    <style name="header.cardHeader">
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:layout_marginEnd">16dp</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginTop">16dp</item>
+    </style>
+
+    <style name="header.sectionHeader">
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:layout_marginEnd">16dp</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginTop">24dp</item>
+    </style>
+
+    <style name="bodyText.field">
+        <item name="android:textColor">@color/fieldText</item>
+    </style>
+
+    <style name="input_field_header" parent="bodyText.muted">
+        <item name="android:textAllCaps">true</item>
+        <item name="android:letterSpacing">0.1</item>
+    </style>
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="dialog_slide">
+        <item name="android:windowEnterAnimation">@anim/enter_bottom_anim</item>
+        <item name="android:windowExitAnimation">@anim/exit_bottom_anim</item>
+    </style>
+
+    <style name="settings_item_icon">
+        <item name="android:textColor">@color/mutedText</item>
+        <item name="android:textSize">15dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+</resources>

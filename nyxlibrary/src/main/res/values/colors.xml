@@ -10,7 +10,8 @@
     <color name="secondaryBg">#141922</color>
     <color name="accent_employee">#00D6D8</color>
     <color name="accent_member">#FF336C</color>
-    <color name="accentHalfAlpha">#5000D6D8</color>
+    <color name="accent_employee_half_alpha">#5000D6D8</color>
+    <color name="accent_member_half_alpha">#50FF336C</color>
     <color name="facebookBlue">#3b5998</color>
     <color name="secondaryBgDimmed">#080a03</color>
     <color name="input_border">#252a31</color>

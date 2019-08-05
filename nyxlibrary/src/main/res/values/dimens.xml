@@ -1,0 +1,26 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="nav_header_vertical_spacing">8dp</dimen>
+    <dimen name="nav_header_height">176dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="design_navigation_separator_vertical_padding" tools:override="true">0dp</dimen>
+
+    <dimen name="settings_layout_margin">16dp</dimen>
+    <dimen name="nyx_card_corner_radius">10dp</dimen>
+
+    <dimen name="settings_item_icon_text_size">16dp</dimen>
+    <dimen name="settings_item_icon_width">40dp</dimen>
+    <dimen name="settings_item_start_end_margin">16dp</dimen>
+
+    <dimen name="image_corner_radius">6dp</dimen>
+    <dimen name="toolbar_elevation">16dp</dimen>
+
+    <dimen name="header_font_size">13dp</dimen>
+    <dimen name="body_text_font_size">12dp</dimen>
+
+    <dimen name="list_item_start_end_margin">16dp</dimen>
+
+    <dimen name="toolbar_button_width">72dp</dimen>
+</resources>

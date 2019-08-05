@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/facebook_button"
+    android:layout_width="250dp"
+    android:layout_height="50dp"
+    android:background="@drawable/fb_login_button"
+    android:paddingEnd="10dp"
+    android:paddingStart="10dp">
+
+        <net.nyxapp.business.employee.views.IconTextView
+            android:id="@+id/facebook_button_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="12dp"
+            android:text="@string/icon_fb_square"
+            android:textColor="@drawable/fb_login_button_icon"
+            android:textSize="28dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/facebook_button_text"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:type="brand"
+            />
+
+        <TextView
+            android:id="@+id/facebook_button_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/facebook_button_icon"
+            android:fontFamily="@font/roboto_medium"
+            tools:text="Login with Facebook"
+            android:textColor="@color/text"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/facebook_button_icon"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            />
+</androidx.constraintlayout.widget.ConstraintLayout>
