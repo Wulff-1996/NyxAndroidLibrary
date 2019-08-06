@@ -1,65 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="text">#F0F1F3</color>
-    <color name="textHalfAlpha">#50F0F1F3</color>
-    <color name="textLowAlpha">#30F0F1F3</color>
-    <color name="mutedText">#636A76</color>
-    <color name="mutedHalfAlpha">#50636A76</color>
-    <color name="fieldText">#B9BEC7</color>
-    <color name="primaryBg">#1A202B</color>
-    <color name="secondaryBg">#141922</color>
+    <color name="text_half_alpha">#50F0F1F3</color>
+    <color name="text_low_alpha">#30F0F1F3</color>
+    <color name="muted_text">#636A76</color>
+    <color name="muted_half_alpha">#50636A76</color>
+    <color name="field_text">#B9BEC7</color>
+    <color name="primary_bg">#1A202B</color>
+    <color name="secondary_bg">#141922</color>
     <color name="accent_employee">#00D6D8</color>
     <color name="accent_member">#FF336C</color>
     <color name="accent_employee_half_alpha">#5000D6D8</color>
     <color name="accent_member_half_alpha">#50FF336C</color>
     <color name="facebook_blue">#3b5998</color>
-    <color name="secondaryBgDimmed">#080a03</color>
+    <color name="secondary_bg_dimmed">#080a03</color>
     <color name="input_border">#252a31</color>
     <color name="settings_item_divider">#212731</color>
 
-    <color name="secondaryAccentBlue">#008bff</color>
-    <color name="secondaryAccentPurple">#9A00FF</color>
+    <color name="accent_blue">#008bff</color>
+    <color name="accent_purple">#9A00FF</color>
 
-    <color name="saturday">@color/secondaryAccentBlue</color>
-    <color name="friday">@color/danger</color>
-    <color name="thursday">@color/secondaryAccentPurple</color>
-    <color name="everyday">@color/text</color>
-
-    <color name="gender_male">@color/secondaryAccentBlue</color>
+    <color name="gender_male">@color/accent_blue</color>
     <color name="gender_female">#ff67e2</color>
-
-    <color name="shift_remark_late">@color/warning</color>
-    <color name="shift_remark_sick">@color/danger</color>
-    <color name="shift_remark_no_show">@color/secondaryAccentBlue</color>
-
-    <color name="table_available">@color/text</color>
-    <color name="table_booked">@color/success</color>
-    <color name="table_arrived">@color/danger</color>
-    <color name="table_rejected">@color/secondaryAccentPurple</color>
-    <color name="table_no_show">@color/secondaryAccentBlue</color>
 
     <color name="transparent">#00000000</color>
 
-    <color name="releasedShift">@color/warning</color>
-
     <color name="success">#00FF8C</color>
-    <color name="successHalfAlpha">#5000FF8C</color>
+    <color name="success_half_alpha">#5000FF8C</color>
     <color name="warning">#FF9849</color>
-    <color name="warningHalfAlpha">#50FF9849</color>
+    <color name="warning_half_alpha">#50FF9849</color>
     <color name="danger">#FF336C</color>
-    <color name="dangerHalfAlpha">#50FF336C</color>
+    <color name="danger_half_alpha">#50FF336C</color>
 
-    <color name="supervisor">@color/secondaryAccentBlue</color>
+    <color name="cash_green">#216C2A</color>
 
-    <color name="cashGreen">#216C2A</color>
-
-    <color name="shift_state_pending">@color/success</color>
-    <color name="shift_state_in_progress">@color/warning</color>
-    <color name="shift_state_complete">@color/danger</color>
-
-    <color name="approved_shift">@color/success</color>
-
-    <color name="mutedText_darkened">#313742</color>
+    <color name="muted_text_darkened">#313742</color>
     <color name="dialog_border">#394049</color>
-
 </resources>

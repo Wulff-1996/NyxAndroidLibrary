@@ -5,7 +5,7 @@
         android:state_pressed="true"
         android:color="@color/accent_member_half_alpha"/>
     <item android:state_enabled="false"
-        android:color="@color/mutedText"/>
+        android:color="@color/muted_text"/>
     <!-- Default color -->
     <item android:color="@color/accent_member" />
 </selector>

@@ -1,10 +1,9 @@
 <resources>
     <string name="app_name">Nyx Library</string>
-    <string name="tap_to_dismiss">Tap to dismiss</string>
-    <string name="success_dialog_text">Success</string>
+    <string name="info_dialog_generic_header">Info</string>
+    <string name="success_dialog_generic_header">Success</string>
     <string name="warning_dialog_generic_header">Unknown Warning</string>
     <string name="member_flagged_dialog_header">Member Flagged</string>
-    <string name="info_dialog_header">Info</string>
     <string name="error_dialog_generic_header">Error</string>
-    <string name="error_dialog_generic_description">Something went wrong, please try again later.</string>
+    <string name="tap_to_dismiss">Tap to dismiss</string>
 </resources>

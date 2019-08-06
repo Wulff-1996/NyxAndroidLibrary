@@ -9,327 +9,375 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <TextView
                 android:id="@+id/progress_bar_header"
+                style="@style/header.sectionHeader"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                style="@style/header.sectionHeader"
                 android:text="Progress bars"
                 android:textSize="24dp"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintVertical_bias="0.0"
-                />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
 
             <net.nyxapp.library.views.NyxProgressBar
                 android:id="@+id/progress_bar_member"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:accent="member"
-                app:layout_constraintTop_toBottomOf="@id/progress_bar_header"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintVertical_bias="0.0"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:layout_margin="16dp"
-                />
+                app:accent="member"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/progress_bar_header"
+                app:layout_constraintVertical_bias="0.0" />
+
             <net.nyxapp.library.views.NyxProgressBar
                 android:id="@+id/progress_bar_employee"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:accent="employee"
-                app:layout_constraintTop_toBottomOf="@id/progress_bar_member"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintVertical_bias="0.0"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:layout_margin="16dp"
-                />
+                app:accent="employee"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/progress_bar_member"
+                app:layout_constraintVertical_bias="0.0" />
 
             <TextView
                 android:id="@+id/button_header"
+                style="@style/header.sectionHeader"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                style="@style/header.sectionHeader"
+                android:layout_margin="16dp"
                 android:text="Buttons"
                 android:textSize="24dp"
-                app:layout_constraintTop_toBottomOf="@id/progress_bar_employee"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintVertical_bias="0.0"
-                android:layout_margin="16dp"
-                />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/progress_bar_employee"
+                app:layout_constraintVertical_bias="0.0" />
 
             <net.nyxapp.library.views.FacebookLoginButton
                 android:id="@+id/facebook_login_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Login with Facebook"
-                app:layout_constraintTop_toBottomOf="@id/button_header"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintVertical_bias="0.0"
                 android:layout_margin="16dp"
-                />
+                android:text="Login with Facebook"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/button_header"
+                app:layout_constraintVertical_bias="0.0" />
 
             <Button
                 android:id="@+id/rounded_button_employee"
+                style="@style/rounded_button.employee"
                 android:layout_width="250dp"
                 android:layout_height="50dp"
-                style="@style/rounded_button.employee"
-                android:text="Employee Button"
-                app:layout_constraintTop_toBottomOf="@id/facebook_login_button"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintVertical_bias="0.0"
                 android:layout_margin="16dp"
-                />
+                android:text="Employee Button"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/facebook_login_button"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <Button
+                android:id="@+id/rounded_button_disabled"
+                style="@style/rounded_button.employee"
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:layout_margin="16dp"
+                android:enabled="false"
+                android:text="Disabled Button"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rounded_button_employee"
+                app:layout_constraintVertical_bias="0.0" />
 
             <Button
                 android:id="@+id/rounded_button_member"
+                style="@style/rounded_button.member"
                 android:layout_width="250dp"
                 android:layout_height="50dp"
-                style="@style/rounded_button.member"
-                android:text="Member Button"
-                app:layout_constraintTop_toBottomOf="@id/rounded_button_employee"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintVertical_bias="0.0"
                 android:layout_margin="16dp"
-                />
+                android:text="Member Button"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rounded_button_disabled"
+                app:layout_constraintVertical_bias="0.0" />
 
             <net.nyxapp.library.views.IconButton
                 android:id="@+id/icon_button"
+                style="@style/toolbar_button_member"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="16dp"
                 android:text="@string/icon_circle_cross"
                 android:textSize="25dp"
-                style="@style/toolbar_button_member"
-                app:layout_constraintTop_toBottomOf="@id/rounded_button_member"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintVertical_bias="0.0"
-                android:layout_margin="16dp"
-                />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rounded_button_member"
+                app:layout_constraintVertical_bias="0.0" />
 
             <Button
                 android:id="@+id/toolbar_button_employee"
+                style="@style/toolbar_button_employee"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                style="@style/toolbar_button_employee"
-                android:text="Text Button"
-                app:layout_constraintTop_toBottomOf="@id/icon_button"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintVertical_bias="0.0"
                 android:layout_margin="16dp"
-                />
+                android:text="Text Button"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/icon_button"
+                app:layout_constraintVertical_bias="0.0" />
 
             <Button
                 android:id="@+id/toolbar_button_member"
+                style="@style/toolbar_button_member"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                style="@style/toolbar_button_member"
-                android:text="Text Button"
-                app:layout_constraintTop_toBottomOf="@id/toolbar_button_employee"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintVertical_bias="0.0"
                 android:layout_margin="16dp"
-                />
+                android:text="Text Button"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/toolbar_button_employee"
+                app:layout_constraintVertical_bias="0.0" />
 
             <TextView
                 android:id="@+id/text_view_header"
+                style="@style/header.sectionHeader"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                style="@style/header.sectionHeader"
+                android:layout_margin="16dp"
                 android:text="Text views"
                 android:textSize="24dp"
-                app:layout_constraintTop_toBottomOf="@id/toolbar_button_member"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintVertical_bias="0.0"
-                android:layout_margin="16dp"
-                />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/toolbar_button_member"
+                app:layout_constraintVertical_bias="0.0" />
 
             <TextView
                 android:id="@+id/text_view_style_header"
+                style="@style/header"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                style="@style/header"
-                android:text="Header"
-                app:layout_constraintTop_toBottomOf="@id/text_view_header"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintVertical_bias="0.0"
                 android:layout_margin="16dp"
-                />
+                android:text="Header"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_view_header"
+                app:layout_constraintVertical_bias="0.0" />
+
             <TextView
                 android:id="@+id/text_view_style_header_employee"
+                style="@style/header.employee"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                style="@style/header.employee"
-                android:text="Header Employee"
-                app:layout_constraintTop_toBottomOf="@id/text_view_style_header"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintVertical_bias="0.0"
                 android:layout_margin="16dp"
-                />
+                android:text="Header Employee"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_view_style_header"
+                app:layout_constraintVertical_bias="0.0" />
 
             <TextView
                 android:id="@+id/text_view_style_header_member"
+                style="@style/header.member"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                style="@style/header.member"
-                android:text="Header Member"
-                app:layout_constraintTop_toBottomOf="@id/text_view_style_header_employee"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintVertical_bias="0.0"
                 android:layout_margin="16dp"
-                />
+                android:text="Header Member"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_view_style_header_employee"
+                app:layout_constraintVertical_bias="0.0" />
 
             <TextView
                 android:id="@+id/text_view_style_body"
+                style="@style/bodyText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                style="@style/bodyText"
-                android:text="Body text"
-                app:layout_constraintTop_toBottomOf="@id/text_view_style_header_member"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintVertical_bias="0.0"
                 android:layout_margin="16dp"
-                />
+                android:text="Body text"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_view_style_header_member"
+                app:layout_constraintVertical_bias="0.0" />
 
             <TextView
                 android:id="@+id/text_view_style_body_muted"
+                style="@style/bodyText.muted"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                style="@style/bodyText.muted"
-                android:text="Body muted"
-                app:layout_constraintTop_toBottomOf="@id/text_view_style_body"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintVertical_bias="0.0"
                 android:layout_margin="16dp"
-                />
+                android:text="Body muted"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_view_style_body"
+                app:layout_constraintVertical_bias="0.0" />
 
             <TextView
                 android:id="@+id/text_view_style_body_bold"
+                style="@style/bodyText.bold"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                style="@style/bodyText.bold"
-                android:text="Body bold"
-                app:layout_constraintTop_toBottomOf="@id/text_view_style_body_muted"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintVertical_bias="0.0"
                 android:layout_margin="16dp"
-                />
+                android:text="Body bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_view_style_body_muted"
+                app:layout_constraintVertical_bias="0.0" />
 
             <TextView
                 android:id="@+id/text_view_style_body_medium"
+                style="@style/bodyText.medium"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                style="@style/bodyText.medium"
-                android:text="Body medium"
-                app:layout_constraintTop_toBottomOf="@id/text_view_style_body_bold"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintVertical_bias="0.0"
                 android:layout_margin="16dp"
-                />
+                android:text="Body medium"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_view_style_body_bold"
+                app:layout_constraintVertical_bias="0.0" />
 
             <net.nyxapp.library.views.IconTextView
                 android:id="@+id/text_view_icon"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/icon_user"
-                app:layout_constraintTop_toBottomOf="@id/text_view_style_body_medium"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintVertical_bias="0.0"
                 android:layout_margin="16dp"
-                />
+                android:text="@string/icon_user"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_view_style_body_medium"
+                app:layout_constraintVertical_bias="0.0" />
 
             <net.nyxapp.library.views.TextWithIconView
                 android:id="@+id/text_with_icon_end"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:nyx_icon="@string/icon_user"
-                app:text="Text with icon end"
-                app:layout_constraintTop_toBottomOf="@id/text_view_icon"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintVertical_bias="0.0"
                 android:layout_margin="16dp"
-                />
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_view_icon"
+                app:layout_constraintVertical_bias="0.0"
+                app:nyx_icon="@string/icon_user"
+                app:text="Text with icon end" />
 
             <net.nyxapp.library.views.TextWithIconView
                 android:id="@+id/text_with_icon_start"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:nyx_icon="@string/icon_user"
-                app:text="Text with icon start"
-                app:icon_placement="before"
-                app:layout_constraintTop_toBottomOf="@id/text_with_icon_end"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintVertical_bias="0.0"
                 android:layout_margin="16dp"
-                />
+                app:icon_placement="before"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_with_icon_end"
+                app:layout_constraintVertical_bias="0.0"
+                app:nyx_icon="@string/icon_user"
+                app:text="Text with icon start" />
 
 
             <net.nyxapp.library.views.TextWithIconView
                 android:id="@+id/text_with_icon_color"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_with_icon_start"
+                app:layout_constraintVertical_bias="0.0"
                 app:nyx_icon="@string/icon_user"
                 app:text="Red everything"
-                app:text_and_icon_color="@color/accent_member"
-                app:layout_constraintTop_toBottomOf="@id/text_with_icon_start"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintVertical_bias="0.0"
-                android:layout_margin="16dp"
-                />
+                app:text_and_icon_color="@color/accent_member" />
 
             <net.nyxapp.library.views.TextWithIconView
                 android:id="@+id/text_with_icon_different_colors"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                app:icon_color="@color/accent_member"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_with_icon_color"
+                app:layout_constraintVertical_bias="0.0"
                 app:nyx_icon="@string/icon_user"
                 app:text="Teal text, red icon"
-                app:text_color="@color/accent_employee"
-                app:icon_color="@color/accent_member"
-                app:layout_constraintTop_toBottomOf="@id/text_with_icon_color"
+                app:text_color="@color/accent_employee" />
+
+            <TextView
+                android:id="@+id/functions_header"
+                style="@style/header.sectionHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:text="Functions"
+                android:textSize="24dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_with_icon_different_colors"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <Button
+                android:id="@+id/functions_show_toast"
+                style="@style/toolbar_button_employee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:text="Show Toast"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/functions_header"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <Button
+                android:id="@+id/functions_show_error_dialog"
+                style="@style/toolbar_button_employee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:text="Show Error Dialog"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/functions_show_toast"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <Button
+                android:id="@+id/functions_show_warning_dialog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/toolbar_button_employee"
+                android:text="Show Warning Dialog"
+                app:layout_constraintTop_toBottomOf="@id/functions_show_error_dialog"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -337,32 +385,96 @@
                 android:layout_margin="16dp"
                 />
 
-
-
-            <!--<TextView
-                android:id="@+id/functions_header"
-                android:layout_width="match_parent"
+            <Button
+                android:id="@+id/functions_show_success_dialog"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                style="@style/header.sectionHeader"
-                android:text="Functions"
-                android:textSize="24dp"
-                app:layout_constraintTop_toBottomOf="@id/text_with_icon_left"
+                style="@style/toolbar_button_employee"
+                android:text="Show Success Dialog"
+                app:layout_constraintTop_toBottomOf="@id/functions_show_warning_dialog"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintVertical_bias="0.0"
                 android:layout_margin="16dp"
-                />-->
+                />
 
+            <Button
+                android:id="@+id/functions_show_info_dialog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/toolbar_button_employee"
+                android:text="Show Info Dialog"
+                app:layout_constraintTop_toBottomOf="@id/functions_show_success_dialog"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                android:layout_margin="16dp"
+                />
 
+            <TextView
+                android:id="@+id/logos_header"
+                style="@style/header.sectionHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:text="Logos"
+                android:textSize="24dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/functions_show_info_dialog"
+                app:layout_constraintVertical_bias="0.0" />
 
+            <ImageView
+                android:id="@+id/logos_logotype_member"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_nyx_logotype_member"
+                app:layout_constraintTop_toBottomOf="@id/logos_header"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                android:layout_margin="16dp" />
 
+            <ImageView
+                android:id="@+id/logos_logotype_employee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_nyx_logotype_employee"
+                app:layout_constraintTop_toBottomOf="@id/logos_logotype_member"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                android:layout_margin="16dp" />
 
+            <ImageView
+                android:id="@+id/logos_logo_member"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_nyx_logo_member"
+                app:layout_constraintTop_toBottomOf="@id/logos_logotype_employee"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                android:layout_margin="16dp" />
 
+            <ImageView
+                android:id="@+id/logos_logo_employee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_nyx_logo_employee"
+                app:layout_constraintTop_toBottomOf="@id/logos_logo_member"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                android:layout_margin="16dp" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-
-
     </ScrollView>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

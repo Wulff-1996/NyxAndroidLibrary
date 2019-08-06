@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <net.nyxapp.library.views.IconTextView
+        android:id="@+id/nyx_progress_image_icon"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/progress_image_default_background"
+        android:gravity="center"
+        android:text="@string/icon_brand_instagram"
+        android:textColor="@color/muted_text"
+        android:textSize="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:type="brand"
+        />
+
+    <net.nyxapp.library.views.NyxImageView
+        android:id="@+id/nyx_progress_image_image"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="2dp"
+        app:imageType="circle"
+        app:layout_constraintBottom_toBottomOf="@+id/nyx_progress_image_icon"
+        app:layout_constraintEnd_toEndOf="@id/nyx_progress_image_icon"
+        app:layout_constraintStart_toStartOf="@id/nyx_progress_image_icon"
+        app:layout_constraintTop_toTopOf="@id/nyx_progress_image_icon"
+        />
+
+    <ProgressBar
+        android:id="@+id/nyx_progress_image_progress"
+        style="@style/Widget.AppCompat.ProgressBar"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        app:layout_constraintBottom_toBottomOf="@+id/nyx_progress_image_icon"
+        app:layout_constraintEnd_toEndOf="@id/nyx_progress_image_icon"
+        app:layout_constraintStart_toStartOf="@id/nyx_progress_image_icon"
+        app:layout_constraintTop_toTopOf="@id/nyx_progress_image_icon"
+        android:visibility="gone"
+        android:indeterminateTint="@color/muted_text"
+        android:indeterminateTintMode="src_in"
+        android:indeterminate="true"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

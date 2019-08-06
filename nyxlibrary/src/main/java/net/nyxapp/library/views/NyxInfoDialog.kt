@@ -11,7 +11,7 @@ import net.nyxapp.library.R
 import net.nyxapp.library.base_view_controllers.NyxActivity
 
 
-class NyxInfoDialog(var context: Activity, private val message: Pair<String?, String?>, val type: NyxInfoDialogType)
+class NyxInfoDialog(var context: Activity, private val message: Pair<String?, String>, val type: NyxInfoDialogType)
     : Dialog(context) {
 
     var delegate: NyxActivity? = null
@@ -32,9 +32,13 @@ class NyxInfoDialog(var context: Activity, private val message: Pair<String?, St
             NyxInfoDialogType.SUCCESS -> {
                 nyx_dialog_icon.setTextColor(context.getColor(R.color.success))
                 nyx_dialog_icon.text = context.getString(R.string.icon_checked_circle)
-                nyx_dialog_header.text = context.getString(R.string.success_dialog_text)
+                nyx_dialog_header.text = context.getString(R.string.success_dialog_generic_header)
             }
-            NyxInfoDialogType.ERROR -> nyx_dialog_icon.setTextColor(context.getColor(R.color.danger)) //Set as standard in XML, therefore doesn't need a initializing
+            NyxInfoDialogType.ERROR -> {
+                nyx_dialog_icon.setTextColor(context.getColor(R.color.danger))
+                nyx_dialog_icon.text = context.getString(R.string.icon_circle_cross)
+                nyx_dialog_header.text = context.getString(R.string.error_dialog_generic_header)
+            }
             NyxInfoDialogType.WARNING -> {
                 nyx_dialog_icon.setTextColor(context.getColor(R.color.warning))
                 nyx_dialog_icon.setType(context, IconTextView.ICON_TYPE_SOLID)
@@ -50,16 +54,14 @@ class NyxInfoDialog(var context: Activity, private val message: Pair<String?, St
             NyxInfoDialogType.INFO -> {
                 nyx_dialog_icon.setTextColor(context.getColor(R.color.text))
                 nyx_dialog_icon.text = context.getString(R.string.icon_info_circle)
-                nyx_dialog_header.text = context.getString(R.string.info_dialog_header)
+                nyx_dialog_header.text = context.getString(R.string.info_dialog_generic_header)
             }
         }
         if (message.first != null) nyx_dialog_header.text = message.first
     }
 
     private fun setupMessage() {
-        if (message.second != null) nyx_dialog_message.text = message.second
-
-        if (type == NyxInfoDialogType.SUCCESS) nyx_dialog_message.text = message.second ?: context.getString(R.string.success_dialog_text)
+        nyx_dialog_message.text = message.second
 
     }
 
@@ -70,7 +72,7 @@ class NyxInfoDialog(var context: Activity, private val message: Pair<String?, St
     }
 
     override fun dismiss() {
-        delegate?.responseDialogOpen = false
+        delegate?.infoDialogOpen = false
         delegate = null
         super.dismiss()
     }

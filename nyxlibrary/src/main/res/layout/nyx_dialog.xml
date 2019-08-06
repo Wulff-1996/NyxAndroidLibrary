@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    android:id="@+id/nyx_dialog_layout"
+<androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/nyx_dialog_layout"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:background="@drawable/nyx_dialog_background">
+    android:background="@drawable/nyx_dialog_background"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <net.nyxapp.library.views.IconTextView
         android:id="@+id/nyx_dialog_icon"
@@ -16,8 +16,8 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="128dp"
         android:layout_marginBottom="8dp"
-        android:text="@string/icon_circle_cross"
-        android:textColor="@color/danger"
+        android:text="@string/icon_info_circle"
+        android:textColor="@color/text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -35,7 +35,7 @@
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="8dp"
         android:maxLines="1"
-        android:text="@string/error_dialog_generic_header"
+        android:text="@string/info_dialog_generic_header"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -52,7 +52,7 @@
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
         android:gravity="center"
-        android:text="@string/error_dialog_generic_description"
+        tools:text="Dialog text"
         app:layout_constraintBottom_toTopOf="@+id/textView3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -61,7 +61,7 @@
     <TextView
         android:id="@+id/textView3"
         style="@style/bodyText.muted"
-        android:textColor="@color/textLowAlpha"
+        android:textColor="@color/text_low_alpha"
         android:gravity="center"
         android:textSize="13dp"
         android:layout_width="0dp"

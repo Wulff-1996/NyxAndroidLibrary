@@ -14,36 +14,18 @@ abstract class NyxActivity : AppCompatActivity(), NyxViewController {
 
     private var toast: Toast? = null
 
-    var responseDialogOpen: Boolean = false
+    var infoDialogOpen: Boolean = false
 
-    override fun showErrorDialog(message: Pair<String?, String?>) {
-        if (!isDestroyed && !isFinishing && !responseDialogOpen) {
-            responseDialogOpen = true
-            val dialog = NyxInfoDialog(this, message, NyxInfoDialog.NyxInfoDialogType.ERROR)
+    override fun showNyxDialog(type: NyxInfoDialog.NyxInfoDialogType, message: Pair<String?, String>) {
+        if (!isDestroyed && !isFinishing && !infoDialogOpen) {
+            infoDialogOpen = true
+            val dialog = NyxInfoDialog(this, message, type)
             dialog.delegate = this
             dialog.show()
         }
     }
 
-    override fun showWarningDialog(message: Pair<String?, String?>) {
-        if (!isDestroyed && !isFinishing && !responseDialogOpen) {
-            responseDialogOpen = true
-            val dialog = NyxInfoDialog(this, message, NyxInfoDialog.NyxInfoDialogType.WARNING)
-            dialog.delegate = this
-            dialog.show()
-        }
-    }
-
-    fun showSuccessDialog(message: Pair<String?, String?>) {
-        if (!isDestroyed && !isFinishing && !responseDialogOpen) {
-            responseDialogOpen = true
-            val dialog = NyxInfoDialog(this, message, NyxInfoDialog.NyxInfoDialogType.SUCCESS)
-            dialog.delegate = this
-            dialog.show()
-        }
-    }
-
-    fun showToast(message: String) {
+    override fun showToast(message: String) {
         val layout = layoutInflater.inflate(R.layout.nyx_custom_toast, nyx_custom_toast)
 
         layout.nyx_toast_text.text = message

@@ -2,13 +2,13 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/primaryBg</item>
-        <item name="colorPrimaryDark">@color/primaryBg</item>
+        <item name="colorPrimary">@color/primary_bg</item>
+        <item name="colorPrimaryDark">@color/primary_bg</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
-        <item name="android:windowBackground">@color/secondaryBg</item>
+        <item name="android:windowBackground">@color/secondary_bg</item>
         <item name="android:textColorPrimary">@color/text</item>
-        <item name="android:textColorSecondary">@color/mutedText</item>
+        <item name="android:textColorSecondary">@color/muted_text</item>
     </style>
 
     <style name="bodyText" parent="TextAppearance.AppCompat">
@@ -18,7 +18,7 @@
     </style>
 
     <style name="bodyText.muted">
-        <item name="android:textColor">@color/mutedText</item>
+        <item name="android:textColor">@color/muted_text</item>
     </style>
 
     <style name="bodyText.muted.medium">
@@ -53,7 +53,7 @@
     </style>
 
     <style name="header.toolbarTitle.underTitle">
-        <item name="android:textColor">@color/mutedText</item>
+        <item name="android:textColor">@color/muted_text</item>
     </style>
 
     <style name="header.toolbarTitle">
@@ -90,7 +90,7 @@
     </style>
 
     <style name="bodyText.field">
-        <item name="android:textColor">@color/fieldText</item>
+        <item name="android:textColor">@color/field_text</item>
     </style>
 
     <style name="input_field_header" parent="bodyText.muted">
