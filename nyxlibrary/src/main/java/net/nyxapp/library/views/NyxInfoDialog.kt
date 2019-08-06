@@ -10,7 +10,6 @@ import kotlinx.android.synthetic.main.nyx_dialog.*
 import net.nyxapp.library.R
 import net.nyxapp.library.base_view_controllers.NyxActivity
 
-
 class NyxInfoDialog(var context: Activity, private val message: Pair<String?, String>, val type: NyxInfoDialogType)
     : Dialog(context) {
 
@@ -40,7 +39,7 @@ class NyxInfoDialog(var context: Activity, private val message: Pair<String?, St
                 nyx_dialog_header.text = context.getString(R.string.error_dialog_generic_header)
             }
             NyxInfoDialogType.WARNING -> {
-                nyx_dialog_icon.setTextColor(context.getColor(R.color.warning))
+                nyx_dialog_icon.setTextColor(context.getColor(R.color.nyx_warning))
                 nyx_dialog_icon.setType(context, IconTextView.ICON_TYPE_SOLID)
                 nyx_dialog_icon.text = context.getString(R.string.icon_warning)
                 nyx_dialog_header.text = context.getString(R.string.warning_dialog_generic_header)
