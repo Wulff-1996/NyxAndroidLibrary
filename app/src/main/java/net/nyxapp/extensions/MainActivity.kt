@@ -11,6 +11,14 @@ class MainActivity : NyxActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+
+        nyx_progress_image_view_image.fbId = "10213973152018240"
+
+        nyx_image_view_image_circle.imageResource = "https://graph.facebook.com/10213973152018240/picture?type=square&width=50&height=50"
+        nyx_image_view_image_rounded.imageResource = "https://graph.facebook.com/10213973152018240/picture?type=square&width=50&height=50"
+        nyx_image_view_image_square.imageResource = "https://graph.facebook.com/10213973152018240/picture?type=square&width=50&height=50"
+
+
         facebook_login_button.setOnClickListener {
             showToast("Facebook login clicked")
         }
@@ -28,10 +36,16 @@ class MainActivity : NyxActivity() {
             showNyxDialog(NyxInfoDialog.NyxInfoDialogType.ERROR, Pair(null, "Error dialog message"))
         }
         functions_show_warning_dialog.setOnClickListener {
-            showNyxDialog(NyxInfoDialog.NyxInfoDialogType.WARNING, Pair(null, "Warning dialog message"))
+            showNyxDialog(
+                NyxInfoDialog.NyxInfoDialogType.WARNING,
+                Pair(null, "Warning dialog message")
+            )
         }
         functions_show_success_dialog.setOnClickListener {
-            showNyxDialog(NyxInfoDialog.NyxInfoDialogType.SUCCESS, Pair(null, "Success dialog message"))
+            showNyxDialog(
+                NyxInfoDialog.NyxInfoDialogType.SUCCESS,
+                Pair(null, "Success dialog message")
+            )
         }
         functions_show_info_dialog.setOnClickListener {
             showNyxDialog(NyxInfoDialog.NyxInfoDialogType.INFO, Pair(null, "Info dialog message"))

@@ -12,25 +12,18 @@ import net.nyxapp.library.R
 
 class NyxImageView : AppCompatImageView {
     constructor(context: Context) : super(context)
-    constructor(context: Context, attrSet: AttributeSet) : super(context, attrSet) {
-        getAttributes(attrSet)
-    }
-
-    constructor(context: Context, attrSet: AttributeSet, defStyleAttr: Int) : super(context, attrSet, defStyleAttr) {
-        getAttributes(attrSet)
-    }
+    constructor(context: Context, attrSet: AttributeSet) : super(context, attrSet) { getAttributes(attrSet) }
+    constructor(context: Context, attrSet: AttributeSet, defStyleAttr: Int) : super(context, attrSet, defStyleAttr) { getAttributes(attrSet) }
 
     var delegate: NyxImageViewProgressDelegate? = null
-
     var imageType: NyxImageType = NyxImageType.ROUNDED
-
     var imageResource: String? = null
         set(value) {
             field = value
             Picasso.with(context).cancelRequest(this)
             if (value != null) {
                 delegate?.processing = true
-                Picasso.with(context).load(value)
+                Picasso.with(context).load(value).fit().centerCrop()
                         .into(this, object : Callback {
                             override fun onSuccess() {
                                 delegate?.processing = false
@@ -44,10 +37,10 @@ class NyxImageView : AppCompatImageView {
                                 setImageDrawable(imageDrawable)
                             }
 
-                            override fun onError() {
-                                delegate?.processing = false
-                            }
-                        })
+                        override fun onError() {
+                            delegate?.processing = false
+                        }
+                    })
             } else {
                 this.setImageResource(R.color.transparent)
             }

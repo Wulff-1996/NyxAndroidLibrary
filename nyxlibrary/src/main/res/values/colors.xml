@@ -16,6 +16,7 @@
     <color name="secondary_bg_dimmed">#080a03</color>
     <color name="input_border">#252a31</color>
     <color name="settings_item_divider">#212731</color>
+    <color name="mutedText">#89909c</color>
 
     <color name="accent_blue">#008bff</color>
     <color name="accent_purple">#9A00FF</color>

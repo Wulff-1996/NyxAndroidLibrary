@@ -2,44 +2,41 @@ package net.nyxapp.library.views
 
 import android.content.Context
 import android.util.AttributeSet
-import android.util.TypedValue
 import android.view.LayoutInflater
 import android.view.View
+import android.widget.ImageView
 import android.widget.ProgressBar
 import androidx.constraintlayout.widget.ConstraintLayout
 import kotlinx.android.synthetic.main.nyx_progress_image_view.view.*
 import net.nyxapp.library.R
 
+/**
+ * Wrapper for [NyxImageView] specific for loading facebook images
+ *      image available -> show image, fetched with dimensions needed for image size
+ *      no image -> shows placeholder icon for image
+ */
 class NyxProgressImageView : ConstraintLayout, NyxImageViewProgressDelegate {
 
     constructor(context: Context) : super(context)
-    constructor(context: Context, attrSet: AttributeSet) : super(context, attrSet) {
-        getAttributeSet(attrSet)
-    }
+    constructor(context: Context, attrs: AttributeSet) : super(context, attrs)
+    constructor(context: Context, attrs: AttributeSet, defStyle: Int) : super(context, attrs, defStyle)
 
-    constructor(context: Context, attrSet: AttributeSet, defStyleAttr: Int) : super(context, attrSet, defStyleAttr) {
-        getAttributeSet(attrSet)
-    } //TODO: Implement variable border thickness
-
-    override var processing: Boolean = false
+    override var processing: Boolean = false // shows progress bar while loading, hides placeholder icon meantime
         set(value) {
             field = value
             if (value) {
                 progressBar.visibility = View.VISIBLE
-                icon.text = null
+                placeholderIcon.visibility = View.GONE
             } else {
                 progressBar.visibility = View.GONE
-                icon.text = context.getString(R.string.icon_brand_instagram)
+                placeholderIcon.visibility = View.VISIBLE
             }
         }
 
     private var image: NyxImageView
-
-    init {
-        LayoutInflater.from(context).inflate(R.layout.nyx_progress_image_view, this, true)
-        image = nyx_progress_image_image
-        image.delegate = this
-    }
+    private var progressBar: ProgressBar
+    private var placeholderIcon: ImageView
+    private var imageDimension: Int? = null // variable to request image size on profile images facebook
 
     var imageResource: String? = null
         set(value) {
@@ -50,28 +47,41 @@ class NyxProgressImageView : ConstraintLayout, NyxImageViewProgressDelegate {
     var fbId: String? = null
         set(value) {
             field = value
-            if (value == null) {
+            if (field == null) {
+                // no image hide loading and show placeholder icon
                 imageResource = null
-            } else {
-                imageResource = "https://graph.facebook.com/$value/picture?width=400&height=400" //TODO: Implement variable image size
+                processing = false
+            } else if (imageDimension != null) {
+                setImageResource()
             }
         }
-    var icon: IconTextView = nyx_progress_image_icon
-    private var progressBar: ProgressBar = nyx_progress_image_progress
 
-    private fun getAttributeSet(attrSet: AttributeSet) {
-        context.theme.obtainStyledAttributes(attrSet, R.styleable.NyxProgressImage, 0, 0).apply {
-            try {
-                getDimension(R.styleable.NyxProgressImage_size, 12f)
-            } finally {
-                recycle()
+    init {
+        LayoutInflater.from(context).inflate(R.layout.nyx_progress_image_view, this, true)
+        image = nyx_progress_image_image
+        image.delegate = this
+        progressBar = nyx_progress_image_progress
+        placeholderIcon = nyx_progress_image_view_placeholder_icon
+
+        // check if dimension of the image has been set
+        if (imageDimension == null) {
+            this.post { // wait for view to get size before deciding image size needed
+                // set the image dimension
+                imageDimension = this.measuredHeight
+
+                if (fbId == null) {
+                    // no image available/unassigned task -> show placeholder without loading etc.
+                    imageResource = null
+                    processing = false
+                } else {
+                    setImageResource()
+                }
             }
         }
     }
 
-    var size: Float = context.resources.getDimension(R.dimen.body_text_font_size)
-        set(value) {
-            field = value
-            icon.setTextSize(TypedValue.COMPLEX_UNIT_DIP, value)
-        }
+    // requests the image from facebook and set the image
+    private fun setImageResource() {
+        imageResource = "https://graph.facebook.com/$fbId/picture?type=square&width=$imageDimension&height=$imageDimension"
+    }
 }
